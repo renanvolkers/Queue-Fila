@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 
 namespace Queue.API
 {
-    public class Global
+    public static class Global
     {
+        private static readonly DateTime startApi = DateTime.Now.ToBrasiliaTimeZone();
+
     }
 }
