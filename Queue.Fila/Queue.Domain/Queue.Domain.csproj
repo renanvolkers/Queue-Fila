@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <Folder Include="Domain\" />
+    <Folder Include="Enum\" />
   </ItemGroup>
 
 </Project>
