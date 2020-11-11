@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CORE.Extension\CORE.Extension.csproj" />
+    <ProjectReference Include="..\Queue.Domain\Queue.Domain.csproj" />
   </ItemGroup>
 
 

@@ -1,5 +1,6 @@
 ﻿using CORE.Extension;
 using Microsoft.Extensions.DependencyInjection;
+using Queue.Domain.Service.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
