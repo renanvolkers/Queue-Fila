@@ -7,6 +7,9 @@
   <ItemGroup>
     <Folder Include="Domain\" />
     <Folder Include="Enum\" />
+    <Folder Include="Service\" />
+    <Folder Include="Repository\" />
+    <Folder Include="Model\" />
   </ItemGroup>
 
 </Project>
