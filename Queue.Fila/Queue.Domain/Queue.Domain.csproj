@@ -7,6 +7,7 @@
   <ItemGroup>
     <Folder Include="Domain\" />
     <Folder Include="Enum\" />
+    <Folder Include="Validation\" />
     <Folder Include="Service\" />
     <Folder Include="Repository\" />
     <Folder Include="Model\" />
