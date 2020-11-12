@@ -6,6 +6,12 @@ namespace Queue.Domain
 {
     public class ProcessQueueService : IProcessQueueService
     {
+        public ProcessQueueService(
+            ILogger<ProcessQueueService> logger,
+            IServiceQueue serviceQueue,)
+        {
+
+        }
         public Task CleamToStartProcess()
         {
             throw new NotImplementedException();
