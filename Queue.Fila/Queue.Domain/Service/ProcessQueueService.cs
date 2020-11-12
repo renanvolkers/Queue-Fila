@@ -1,4 +1,5 @@
-﻿using Queue.Domain.Service.Interface;
+﻿using Microsoft.Extensions.Logging;
+using Queue.Domain.Service.Interface;
 using System;
 using System.Threading.Tasks;
 
@@ -8,7 +9,7 @@ namespace Queue.Domain
     {
         public ProcessQueueService(
             ILogger<ProcessQueueService> logger,
-            IServiceQueue serviceQueue,)
+            IServiceQueue serviceQueue)
         {
 
         }
