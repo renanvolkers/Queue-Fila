@@ -15,7 +15,8 @@ namespace Queue.Domain
         }
         public Task CleamToStartProcess()
         {
-            throw new NotImplementedException();
+            {
+                throw new NotImplementedException();
         }
 
         public Task ProcessQueue()
