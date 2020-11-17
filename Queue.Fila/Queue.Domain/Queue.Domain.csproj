@@ -8,7 +8,6 @@
     <Folder Include="Domain\" />
     <Folder Include="Enum\" />
     <Folder Include="Validation\" />
-    <Folder Include="Repository\" />
     <Folder Include="Model\" />
   </ItemGroup>
 
