@@ -7,16 +7,26 @@ namespace Queue.Domain
 {
     public class ProcessQueueService : IProcessQueueService
     {
+        private ILogger<ProcessQueueService> _Logger;
         public ProcessQueueService(
             ILogger<ProcessQueueService> logger,
             IQueueService serviceQueue)
         {
-
+            _Logger = logger;
         }
 
         public Task CleamToStartProcess()
         {
-            throw new NotImplementedException();
+            try
+            {
+                await _MinimumTargetUploadCsvRepository.SetErrorFilesProcessing();
+                _Logger.LogInformation("CleamToStartProcess SUCESS");
+            }
+            catch (Exception ex)
+            {
+                _Logger.LogCritical(ex, "ERRO AO EXECUTAR O CleamToStartProcess");
+                throw ex;
+            }
         }
 
         public Task ProcessQueue()
