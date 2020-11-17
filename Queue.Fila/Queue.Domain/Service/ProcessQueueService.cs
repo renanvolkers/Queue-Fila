@@ -9,14 +9,14 @@ namespace Queue.Domain
     {
         public ProcessQueueService(
             ILogger<ProcessQueueService> logger,
-            IServiceQueue serviceQueue)
+            IQueueService serviceQueue)
         {
 
         }
+
         public Task CleamToStartProcess()
         {
-            {
-                throw new NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public Task ProcessQueue()
@@ -24,4 +24,5 @@ namespace Queue.Domain
             throw new NotImplementedException();
         }
     }
-}
+
+    }
