@@ -7,7 +7,7 @@ namespace Queue.Domain
 {
     public class ProcessQueueService : IProcessQueueService
     {
-        private ILogger<ProcessQueueService> _Logger;
+        private readonly ILogger<ProcessQueueService> _Logger;
         public ProcessQueueService(
             ILogger<ProcessQueueService> logger,
             IQueueService serviceQueue)
@@ -15,21 +15,21 @@ namespace Queue.Domain
             _Logger = logger;
         }
 
-        public Task CleamToStartProcess()
+        public Task SetCleanConfiguration()
         {
             try
             {
-                await _MinimumTargetUploadCsvRepository.SetErrorFilesProcessing();
-                _Logger.LogInformation("CleamToStartProcess SUCESS");
+                await _WeatherForecastUploadFileRepository.UpdateErrorQueue();
+                _Logger.LogInformation("Configuration is OK");
             }
             catch (Exception ex)
             {
-                _Logger.LogCritical(ex, "ERRO AO EXECUTAR O CleamToStartProcess");
-                throw ex;
+                _Logger.LogCritical(ex, "Configuration Fail!!");
+                throw;
             }
         }
 
-        public Task ProcessQueue()
+        public Task MethodExecuteQueue()
         {
             throw new NotImplementedException();
         }

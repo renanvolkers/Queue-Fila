@@ -7,7 +7,7 @@ namespace Queue.Domain.Service.Interface
 {
     public interface IProcessQueueService
     {
-        Task CleamToStartProcess();
-        Task ProcessQueue();
+        Task SetCleanConfiguration();
+        Task MethodExecuteQueue();
     }
 }
